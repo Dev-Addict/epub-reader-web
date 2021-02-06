@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler, Dispatch, FC, SetStateAction, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import { BookLover, OpenBook } from '../assets';
+import { Color } from '../constants';
 
 const Container = styled('div')`
   width: 100vw;
@@ -8,7 +9,7 @@ const Container = styled('div')`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #EFE5EE;
+  background-color: ${Color.LIGHT};
 `;
 
 const FileInput = styled('input')`
@@ -22,7 +23,7 @@ interface ButtonProps {
 const Button = styled('div') <ButtonProps>`
   display: flex;
   flex-direction: row;
-  background-color: #5DD39E;
+  background-color: ${Color.GREEN};
   border-radius: 10px;
   transition: all 336ms;
   opacity: ${({ disabled }) => disabled ? 0.7 : 1};
@@ -40,11 +41,11 @@ const ButtonText = styled('div')`
   padding: 12px 50px;
   font-size: 17px;
   user-select: none;
-  background-color: #348AA7;
+  background-color: ${Color.BLUE};
   transition: all 336ms;
-  color: #F8E5EE;
+  color: ${Color.LIGHT};
   font-weight: bold;
-  box-shadow: 0 0 6px 0 #348AA788;
+  box-shadow: 0 0 6px 0 ${Color.BLUE}88;
 `;
 
 const ButtonIcon = styled('div')`
