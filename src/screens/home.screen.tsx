@@ -10,6 +10,10 @@ const Container = styled('div')`
   align-items: center;
   justify-content: space-around;
   background-color: ${Color.LIGHT};
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const FileInput = styled('input')`
@@ -57,6 +61,20 @@ const IllustrationContainer = styled('div')`
   & > svg {
     height: 90vh;
     width: auto;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    & > svg {
+      width: 50vw;
+      height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    & > svg {
+      width: 70vw;
+      height: auto;
+    }
   }
 `;
 
